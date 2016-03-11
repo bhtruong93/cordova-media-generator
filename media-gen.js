@@ -6,7 +6,9 @@ var gm = require('gm'),
   fs = require('fs'),
   screenshots = require('./screenshots'),
   config, iOSProjectName,
-  q = require('q');
+  q = require('q'),
+	iosIconOut = '/Images.xcassets/AppIcon.appiconset',
+	iosSplashOut = '/Images.xcassets/LaunchImage.launchimage';
 
 
 function resize(width, height, bgColour, imagePath, outputFilename, outputPath) {
@@ -94,126 +96,126 @@ function generate() {
       {
         width: 180,
         height: 180,
-        path: "ios/" + iOSProjectName + "/Resources/icons",
+        path: "ios/" + iOSProjectName + iosIconOut,
         filename: "icon-60@3x.png",
         source: process.argv[2] || config.icon || config.image
       },
       {
         width: 120,
         height: 120,
-        path: "ios/" + iOSProjectName + "/Resources/icons",
+        path: "ios/" + iOSProjectName + iosIconOut,
         filename: "icon-60@2x.png",
         source: process.argv[2] || config.icon || config.image
       },
       {
         width: 40,
         height: 40,
-        path: "ios/" + iOSProjectName + "/Resources/icons",
+        path: "ios/" + iOSProjectName + iosIconOut,
         filename: "icon-40.png",
         source: process.argv[2] || config.icon || config.image
       },
       {
         width: 80,
         height: 80,
-        path: "ios/" + iOSProjectName + "/Resources/icons",
+        path: "ios/" + iOSProjectName + iosIconOut,
         filename: "icon-40@2x.png",
         source: process.argv[2] || config.icon || config.image
       },
       {
         width: 120,
         height: 120,
-        path: "ios/" + iOSProjectName + "/Resources/icons",
+        path: "ios/" + iOSProjectName + iosIconOut,
         filename: "icon-40@3x.png",
         source: process.argv[2] || config.icon || config.image
       },
       {
         width: 50,
         height: 50,
-        path: "ios/" + iOSProjectName + "/Resources/icons",
+        path: "ios/" + iOSProjectName + iosIconOut,
         filename: "icon-50.png",
         source: process.argv[2] || config.icon || config.image
       },
       {
         width: 100,
         height: 100,
-        path: "ios/" + iOSProjectName + "/Resources/icons",
+        path: "ios/" + iOSProjectName + iosIconOut,
         filename: "icon-50@2x.png",
         source: process.argv[2] || config.icon || config.image
       },
       {
         width: 60,
         height: 60,
-        path: "ios/" + iOSProjectName + "/Resources/icons",
+        path: "ios/" + iOSProjectName + iosIconOut,
         filename: "icon-60.png",
         source: process.argv[2] || config.icon || config.image
       },
       {
         width: 72,
         height: 72,
-        path: "ios/" + iOSProjectName + "/Resources/icons",
+        path: "ios/" + iOSProjectName + iosIconOut,
         filename: "icon-72.png",
         source: process.argv[2] || config.icon || config.image
       },
       {
         width: 144,
         height: 144,
-        path: "ios/" + iOSProjectName + "/Resources/icons",
+        path: "ios/" + iOSProjectName + iosIconOut,
         filename: "icon-72@2x.png",
         source: process.argv[2] || config.icon || config.image
       },
       {
         width: 76,
         height: 76,
-        path: "ios/" + iOSProjectName + "/Resources/icons",
+        path: "ios/" + iOSProjectName + iosIconOut,
         filename: "icon-76.png",
         source: process.argv[2] || config.icon || config.image
       },
       {
         width: 152,
         height: 152,
-        path: "ios/" + iOSProjectName + "/Resources/icons",
+        path: "ios/" + iOSProjectName + iosIconOut,
         filename: "icon-76@2x.png",
         source: process.argv[2] || config.icon || config.image
       },
       {
         width: 120,
         height: 120,
-        path: "ios/" + iOSProjectName + "/Resources/icons",
+        path: "ios/" + iOSProjectName + iosIconOut,
         filename: "icon-120.png",
         source: process.argv[2] || config.icon || config.image
       },
       {
         width: 29,
         height: 29,
-        path: "ios/" + iOSProjectName + "/Resources/icons",
+        path: "ios/" + iOSProjectName + iosIconOut,
         filename: "icon-small.png",
         source: process.argv[2] || config.icon || config.image
       },
       {
         width: 58,
         height: 58,
-        path: "ios/" + iOSProjectName + "/Resources/icons",
+        path: "ios/" + iOSProjectName + iosIconOut,
         filename: "icon-small@2x.png",
         source: process.argv[2] || config.icon || config.image
       },
       {
         width: 87,
         height: 87,
-        path: "ios/" + iOSProjectName + "/Resources/icons",
+        path: "ios/" + iOSProjectName + iosIconOut,
         filename: "icon-small@3x.png",
         source: process.argv[2] || config.icon || config.image
       },
       {
         width: 57,
         height: 57,
-        path: "ios/" + iOSProjectName + "/Resources/icons",
+        path: "ios/" + iOSProjectName + iosIconOut,
         filename: "icon.png",
         source: process.argv[2] || config.icon || config.image
       },
       {
         width: 114,
         height: 114,
-        path: "ios/" + iOSProjectName + "/Resources/icons",
+        path: "ios/" + iOSProjectName + iosIconOut,
         filename: "icon@2x.png",
         source: process.argv[2] || config.icon || config.image
       },
@@ -222,70 +224,70 @@ function generate() {
         {
           width: 640,
           height: 1136,
-          path: "ios/" + iOSProjectName + "/Resources/splash",
+          path: "ios/" + iOSProjectName + iosSplashOut,
           filename: "Default-568h@2x~iphone.png",
           source: process.argv[2] || config.splash || config.image
         },
         {
           width: 2048,
           height: 1536,
-          path: "ios/" + iOSProjectName + "/Resources/splash",
+          path: "ios/" + iOSProjectName + iosSplashOut,
           filename: "Default-Landscape@2x~ipad.png",
           source: process.argv[2] || config.splash || config.image
         },
         {
           width: 1024,
           height: 768,
-          path: "ios/" + iOSProjectName + "/Resources/splash",
+          path: "ios/" + iOSProjectName + iosSplashOut,
           filename: "Default-Landscape~ipad.png",
           source: process.argv[2] || config.splash || config.image
         },
         {
           width: 1536,
           height: 2048,
-          path: "ios/" + iOSProjectName + "/Resources/splash",
+          path: "ios/" + iOSProjectName + iosSplashOut,
           filename: "Default-Portrait@2x~ipad.png",
           source: process.argv[2] || config.splash || config.image
         },
         {
           width: 768,
           height: 1024,
-          path: "ios/" + iOSProjectName + "/Resources/splash",
+          path: "ios/" + iOSProjectName + iosSplashOut,
           filename: "Default-Portrait~ipad.png",
           source: process.argv[2] || config.splash || config.image
         },
         {
           width: 640,
           height: 960,
-          path: "ios/" + iOSProjectName + "/Resources/splash",
+          path: "ios/" + iOSProjectName + iosSplashOut,
           filename: "Default@2x~iphone.png",
           source: process.argv[2] || config.splash || config.image
         },
         {
           width: 320,
           height: 480,
-          path: "ios/" + iOSProjectName + "/Resources/splash",
+          path: "ios/" + iOSProjectName + iosSplashOut,
           filename: "Default~iphone.png",
           source: process.argv[2] || config.splash || config.image
         },
         {
           width: 750,
           height: 1344,
-          path: "ios/" + iOSProjectName + "/Resources/splash",
+          path: "ios/" + iOSProjectName + iosSplashOut,
           filename: "Default-667h.png",
           source: process.argv[2] || config.splash || config.image
         },
         {
           width: 1242,
           height: 2208,
-          path: "ios/" + iOSProjectName + "/Resources/splash",
+          path: "ios/" + iOSProjectName + iosSplashOut,
           filename: "Default-736h.png",
           source: process.argv[2] || config.splash || config.image
         },
         {
           width: 2208,
           height: 1242,
-          path: "ios/" + iOSProjectName + "/Resources/splash",
+          path: "ios/" + iOSProjectName + iosSplashOut,
           filename: "Default-Landscape-736h.png",
           source: process.argv[2] || config.splash || config.image
         },
